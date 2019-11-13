@@ -25,10 +25,9 @@ public class SeleniumFramework {
 
         driver.findElement(By.cssSelector("[data-testid=\'loginSubmit\']")).click();
 
-        //Assert.assertTrue(driver.findElement(By.cssSelector("[class=\'ui error message\']")).isDisplayed());
         Thread.sleep(3000);
         String URL = driver.getCurrentUrl();
-        Assert.assertEquals(URL, "https://deens.com/" );
+        Assert.assertTrue(driver.findElement(By.cssSelector("[class*=\'DesktopDropDownMenu__AvatarWrapper\']")).isDisplayed());
         System.out.println("Login Successful");
 
         driver.quit();
