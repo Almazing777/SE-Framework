@@ -20,3 +20,4 @@ chromedriver
 gradlew
 gradlew.bat
 settings.gradle
+.idea/workspace.xml
