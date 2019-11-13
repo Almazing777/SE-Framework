@@ -19,3 +19,9 @@ dependencies {
     testCompile group: 'org.testng', name: 'testng', version: '7.0.0'
 }
 
+test {
+    useTestNG() {
+        suites ("src/test/resources/TestNG.xml")
+    }
+}
+
