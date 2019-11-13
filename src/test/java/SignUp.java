@@ -13,22 +13,16 @@ public class SignUp {
     public static void SignUpSuccess() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         driver.get("https://deens.com/?internaltraffic");
+        driver.manage().window().maximize();
 
-        WebElement signup = driver.findElement(By.cssSelector("[href*='register']"));
-        signup.click();
-        signup.sendKeys("AlmasMendy");
+        driver.findElement(By.cssSelector("[href*='register']")).click();
+        driver.findElement(By.cssSelector("[id=\'username\']")).sendKeys("AlmasMendy");
         Thread.sleep(1000);
 
-        WebElement email = driver.findElement(By.cssSelector("[id=\'email\']"));
-        email.click();
-        email.sendKeys("someone@gmail.com");
-
+        driver.findElement(By.cssSelector("[id=\'email\']")).sendKeys("someone@gmail.com");
         Thread.sleep(1000);
 
-        WebElement password = driver.findElement(By.cssSelector("[id=\'password\']"));
-        password.click();
-        password.sendKeys("newpassword");
-
+        driver.findElement(By.cssSelector("[id=\'password\']")).sendKeys("newpassword");;
         Thread.sleep(1000);
         driver.quit();
     }
@@ -38,6 +32,7 @@ public class SignUp {
     public static void SignUpWrongEmail() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         driver.get("https://deens.com/?internaltraffic");
+        driver.manage().window().maximize();
 
         WebElement signup = driver.findElement(By.cssSelector("[href*='register']"));
         signup.click();
@@ -68,6 +63,7 @@ public class SignUp {
     public static void SignUpEmptyCredentials() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         driver.get("https://deens.com/?internaltraffic");
+        driver.manage().window().maximize();
 
         driver.findElement(By.cssSelector("[href*='register']")).click();
 
