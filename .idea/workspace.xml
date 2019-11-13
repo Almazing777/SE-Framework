@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5599eabb-6786-46cb-9ce8-85b8b30b2fe6" name="Default Changelist" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SeleniumFramework.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SeleniumFramework.java" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/src/test/java/SignUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/TestNG.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestNG.xml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +22,24 @@
       <ProjectState />
     </projectState>
   </component>
+<<<<<<< Updated upstream
+=======
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+>>>>>>> Stashed changes
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -57,6 +81,7 @@
       </list>
     </option>
   </component>
+<<<<<<< Updated upstream
   <component name="RunManager" selected="Gradle.SeleniumFramework.passwordCheck">
     <configuration name="SeleniumFramework" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SeleniumFramework" />
@@ -65,6 +90,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+=======
+  <component name="RunManager" selected="Gradle.SignUp.SignUpSuccess">
+>>>>>>> Stashed changes
     <configuration name="SeleniumFramework" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -85,12 +113,15 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+<<<<<<< Updated upstream
     <configuration name="SeleniumFramework.IncorrectEmailAndPassword" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+=======
+    <configuration name="SeleniumFramework.EmptyCredentials" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;SeleniumFramework.IncorrectEmailAndPassword&quot;" />
+        <option name="scriptParameters" value="--tests &quot;SeleniumFramework.EmptyCredentials&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -105,12 +136,57 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SeleniumFramework.passwordCheck" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SignUp.SignUpEmptyCredentials" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+>>>>>>> Stashed changes
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;SeleniumFramework.passwordCheck&quot;" />
+<<<<<<< Updated upstream
+        <option name="scriptParameters" value="--tests &quot;SeleniumFramework.IncorrectEmailAndPassword&quot;" />
+=======
+        <option name="scriptParameters" value="--tests &quot;SignUp.SignUpEmptyCredentials&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SignUp.SignUpSuccess" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;SignUp.SignUpSuccess&quot;" />
+>>>>>>> Stashed changes
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SignUp.SignUpWrongEmail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;SignUp.SignUpWrongEmail&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -127,10 +203,18 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< Updated upstream
         <item itemvalue="Gradle.SeleniumFramework.passwordCheck" />
         <item itemvalue="Gradle.SeleniumFramework.IncorrectEmailAndPassword" />
         <item itemvalue="Gradle.SeleniumFramework" />
         <item itemvalue="Application.SeleniumFramework" />
+=======
+        <item itemvalue="Gradle.SignUp.SignUpSuccess" />
+        <item itemvalue="Gradle.SignUp.SignUpEmptyCredentials" />
+        <item itemvalue="Gradle.SignUp.SignUpWrongEmail" />
+        <item itemvalue="Gradle.SeleniumFramework" />
+        <item itemvalue="Gradle.SeleniumFramework.EmptyCredentials" />
+>>>>>>> Stashed changes
       </list>
     </recent_temporary>
   </component>
