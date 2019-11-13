@@ -14,16 +14,22 @@ public class SignUp {
         WebDriver driver = new ChromeDriver();
         driver.get("https://deens.com/?internaltraffic");
         driver.manage().window().maximize();
+        Thread.sleep(1000);
 
         driver.findElement(By.cssSelector("[href*='register']")).click();
-        driver.findElement(By.cssSelector("[id=\'username\']")).sendKeys("AlmasMendy");
         Thread.sleep(1000);
 
-        driver.findElement(By.cssSelector("[id=\'email\']")).sendKeys("someone@gmail.com");
+        driver.findElement(By.cssSelector("[id=\'username\']")).sendKeys("KzMendy");
+        driver.findElement(By.cssSelector("[id=\'email\']")).sendKeys("AlmasKz@gmail.com");
+        driver.findElement(By.cssSelector("[id=\'password\']")).sendKeys("newpassword");
+
         Thread.sleep(1000);
 
-        driver.findElement(By.cssSelector("[id=\'password\']")).sendKeys("newpassword");;
-        Thread.sleep(1000);
+        driver.findElement(By.cssSelector("[class*=button]")).click();
+        Thread.sleep(6000);
+
+        Assert.assertTrue(driver.findElement(By.cssSelector("[class*=\'DesktopDropDownMenu__AvatarWrapper\']")).isDisplayed());
+        System.out.println("SignUp Successful");
         driver.quit();
     }
 
@@ -33,27 +39,23 @@ public class SignUp {
         WebDriver driver = new ChromeDriver();
         driver.get("https://deens.com/?internaltraffic");
         driver.manage().window().maximize();
-
-        WebElement signup = driver.findElement(By.cssSelector("[href*='register']"));
-        signup.click();
-        signup.sendKeys("AlmasMendy");
         Thread.sleep(1000);
 
-        WebElement email = driver.findElement(By.cssSelector("[id=\'email\']"));
-        email.click();
-        email.sendKeys("gmail.com");
-
+        driver.findElement(By.cssSelector("[href*='register']")).click();;
         Thread.sleep(1000);
 
-        WebElement password = driver.findElement(By.cssSelector("[id=\'password\']"));
-        password.click();
-        password.sendKeys("newpassword");
+        driver.findElement(By.cssSelector("[id=\'username\']")).sendKeys("Alm");
+        driver.findElement(By.cssSelector("[id=\'email\']")).sendKeys("gmail.com");
+        driver.findElement(By.cssSelector("[id=\'password\']")).sendKeys("newpassword");
+
+        Thread.sleep(1000);
 
         driver.findElement(By.cssSelector("[class*=button]")).click();
 
         Thread.sleep(1000);
 
         Assert.assertTrue(driver.findElement(By.cssSelector("[class=\'ui message\']")).isDisplayed());
+        System.out.println("Error: Wrong Email");
 
         driver.quit();
     }
@@ -65,13 +67,19 @@ public class SignUp {
         driver.get("https://deens.com/?internaltraffic");
         driver.manage().window().maximize();
 
-        driver.findElement(By.cssSelector("[href*='register']")).click();
+        driver.findElement(By.cssSelector("[href*='register']")).click();;
+        Thread.sleep(1000);
 
+        driver.findElement(By.cssSelector("[id=\'username\']")).sendKeys("");
+        driver.findElement(By.cssSelector("[id=\'email\']")).sendKeys("");
+        driver.findElement(By.cssSelector("[id=\'password\']")).sendKeys("");
         Thread.sleep(1000);
 
         driver.findElement(By.cssSelector("[class*=button]")).click();
+        Thread.sleep(1000);
 
         Assert.assertTrue(driver.findElement(By.cssSelector("[class=\'ui message\']")).isDisplayed());
+        System.out.println("Empty Credentials");
         driver.quit();
     }
 
