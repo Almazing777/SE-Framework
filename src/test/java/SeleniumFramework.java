@@ -26,7 +26,6 @@ public class SeleniumFramework {
         driver.findElement(By.cssSelector("[data-testid=\'loginSubmit\']")).click();
 
         Thread.sleep(3000);
-        String URL = driver.getCurrentUrl();
         Assert.assertTrue(driver.findElement(By.cssSelector("[class*=\'DesktopDropDownMenu__AvatarWrapper\']")).isDisplayed());
         System.out.println("Login Successful");
 
