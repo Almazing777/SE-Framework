@@ -1,51 +1,76 @@
-import org.junit.Test;
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
-import java.sql.Time;
-import java.util.concurrent.TimeUnit;
 
 public class SeleniumFramework {
 
     @Test
-    public void passwordCheck() {
+    public static void LoginSuccess() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
-        driver.get("https://deens-master.now.sh/login");
+        driver.get("https://deens.com/?internaltraffic");
+        driver.manage().window().maximize();
+        Thread.sleep(1000);
 
-        WebElement login_button = driver.findElement(By.cssSelector("[data-testid=\'loginSubmit\']"));
-        login_button.click();
+        driver.findElement(By.cssSelector("a[href*='login']")).click();
+        Thread.sleep(1000);
 
-        WebElement uiErrorMessage = driver.findElement(By.cssSelector(".ui.error.message p"));
+        driver.findElement(By.cssSelector("[id=\'email\']")).sendKeys("Mendygax@gmail.com");
+        driver.findElement(By.cssSelector("#password")).sendKeys("Positive89");
 
-        String errorMessagetext = uiErrorMessage.getText();
-        System.out.println(errorMessagetext);
+        Thread.sleep(1000);
 
-        Assert.assertEquals(errorMessagetext, "Empty email or password");
+        driver.findElement(By.cssSelector("[data-testid=\'loginSubmit\']")).click();
 
+        Thread.sleep(3000);
+        Assert.assertTrue(driver.findElement(By.cssSelector("[class*=\'DesktopDropDownMenu__AvatarWrapper\']")).isDisplayed());
+        System.out.println("Login Successful");
 
+        driver.quit();
     }
-}
 
-//    @Test
-//    public void IncorrectEmailAndPassword() {
-//        WebDriver driver = new ChromeDriver();
-//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//
-//        WebElement emailField = driver.findElement(By.cssSelector("#email"));
-//        emailField.sendKeys("incorrect@email.com");
-//
-//        WebElement passwordField = driver.findElement(By.cssSelector("password"));
-//        passwordField.sendKeys("incorrect password");
-//
-//        WebElement login_button = driver.findElement(By.cssSelector("[data-testid=\'loginSubmit\']"));
-//        login_button.click();
-//
-//        WebElement uiErrorMessage = driver.findElement(By.cssSelector(".ui.error.message p"));
-//
-//        String errorMessagetext = uiErrorMessage.getText();
-//        System.out.println(errorMessagetext);
-//
-//        Assert.assertEquals(errorMessagetext, "Empty email or password");
+    //    TC2 Login Wrong credentials (not existing email)
+    @Test
+    public static void WrongEmail() throws InterruptedException {
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://deens.com/?internaltraffic");
+        driver.manage().window().maximize();
+        Thread.sleep(1000);
+
+        driver.findElement(By.cssSelector("a[href*='login']")).click();
+        Thread.sleep(1000);
+
+        driver.findElement(By.cssSelector("[id=\'email\']")).sendKeys("Men@gmail.com");
+        driver.findElement(By.cssSelector("#password")).sendKeys("Positive89");
+
+        Thread.sleep(1000);
+
+        driver.findElement(By.cssSelector("[data-testid=\'loginSubmit\']")).click();
+
+        Thread.sleep(3000);
+
+        Assert.assertTrue(driver.findElement(By.cssSelector("[class=\'ui error message\']")).isDisplayed());
+        driver.quit();
+    }
+
+    //    TC3 Login Empty Credentials
+    @Test
+    public static void EmptyCredentials() throws InterruptedException {
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://deens.com/?internaltraffic");
+        driver.manage().window().maximize();
+
+        driver.findElement(By.cssSelector("a[href*='login']")).click();
+
+        Thread.sleep(2000);
+
+        driver.findElement(By.cssSelector("[data-testid=\'loginSubmit\']")).click();
+
+        Assert.assertTrue(driver.findElement(By.cssSelector("[class=\'ui error message\']")).isDisplayed());
+        driver.quit();
+    }
+
+}
