@@ -71,5 +71,4 @@ public class SeleniumFramework {
         Assert.assertTrue(driver.findElement(By.cssSelector("[class=\'ui error message\']")).isDisplayed());
         driver.quit();
     }
-
 }

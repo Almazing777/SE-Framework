@@ -9,6 +9,8 @@
             <class name="SignUp"/>
             <class name="TripListedPage"/>
             <class name="BaseTest"/>
+            <class name="DropDown"/>
+            <class name="CheckBox"/>
         </classes>
     </test>
 </suite>
