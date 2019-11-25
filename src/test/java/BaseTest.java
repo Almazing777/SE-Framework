@@ -14,8 +14,7 @@ public class BaseTest {
         driver = new ChromeDriver();
         driver.get("https://deens.com/");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS) ;
-.
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
     }
 
