@@ -10,7 +10,8 @@ import java.util.concurrent.TimeUnit;
 
 public class SignUp {
 
-    private static WebDriver driver;
+    public static WebDriver driver;
+
     private static By username = By.cssSelector("[id=\'username\']");
     private static By email = By.cssSelector("[id=\'email\']");
     private static By password = By.cssSelector("[id=\'password\']");

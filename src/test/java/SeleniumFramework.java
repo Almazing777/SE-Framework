@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
-
 public class SeleniumFramework {
 
     @Test
@@ -72,5 +71,4 @@ public class SeleniumFramework {
         Assert.assertTrue(driver.findElement(By.cssSelector("[class=\'ui error message\']")).isDisplayed());
         driver.quit();
     }
-
 }
